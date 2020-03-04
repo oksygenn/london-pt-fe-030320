@@ -1,0 +1,13 @@
+const greeting = 'Hello';
+const name = 'Oxy';
+const phrase = `${greeting}, ${name}`;
+const price = 35.5;
+const quantity = 22;
+const total = price * quantity;
+const age1 = 28;
+const age2 = 33;
+const age3 = 20;
+const averageAge = (age1 + age2 + age3) / 3;
+let loggedIn = true;
+const adminUser = false;
+let missingInfo;
