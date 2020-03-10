@@ -7,7 +7,7 @@
 function myName(name) {
     console.log(`My name is ${name}`);
 };
-myName("Oksana");
+myName('Oksana');
 
 /**
  * Exercise 2
@@ -36,7 +36,7 @@ aboutMe('Zhmerynka', 'Ukraine');
  * as params and log sum.
  */
 
- function logSum( num1, num2) {
+ function logSum(num1, num2) {
      console.log(num1 + num2);
  };
  logSum(23, 23);
