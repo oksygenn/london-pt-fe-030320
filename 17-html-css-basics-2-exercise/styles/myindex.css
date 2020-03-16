@@ -1,0 +1,115 @@
+
+body {
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin: 0;
+}
+#home {
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    background-color: #000000;
+    background-image: url(../images/wave-1817646_1920.png);
+    background-size: 100%;
+    color: white;
+    min-height: 53vw;
+}
+.nav-menu {
+    position: absolute;
+    top: 0px;
+    right: 100px;
+}
+.nav-menu ul {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 40vw;
+    list-style: none;
+}
+.header {
+    margin: auto auto auto 100px;
+}
+.header p {
+    font-size: 1.6em;
+}
+.nav-link {
+     color: white;
+     text-decoration: none;
+     font-size: 1.1em;
+ }
+ h1 {
+     font-size: 2.7em;
+ }
+ #html-css {
+    padding: 50px 0;
+ }
+.grid-container {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 400px 400px;
+    gap: 70px;
+    justify-content: center;
+}
+.grid-item {
+   /* background-color: burlywood; */
+   text-align: left;
+   line-height: 25px;
+   margin: 40px;
+}
+.grid-item h2 {
+    font-size: 2.8em;
+    font-weight: 900;
+}
+.grid-item p {
+    font-size: 1.4em;
+    font-weight: 100;
+    padding: 10px;
+}
+.grid-image {
+    background-image: url(../images/codes-coding-css-1921326.jpg);
+    filter: grayscale(70%);
+    text-align: center;
+}
+.orange-text h2 {
+    color: #ff4613;
+}
+.green-text h2 {
+    color: green;
+}
+
+.grid-image-text {
+    font-size: 6em;
+    font-weight: bold;
+    margin-top: 40%;
+    filter: none;
+    color: white;
+}
+
+/* cards 8 */
+
+.container {
+    height: 800px;
+    background-color: gainsboro;
+    /* display: flex; */
+    /* justify-content: center; */
+    text-align: center;
+    padding: 50px;
+}
+.cards {
+    width: 70vw;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    /* margin: 2em; */
+}
+
+.card-white {
+    background-color: white;
+    margin: 3%;
+}
+.card-white img {
+    padding: 3%;
+}
