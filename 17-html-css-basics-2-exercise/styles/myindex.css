@@ -8,13 +8,16 @@ body {
     color: #616464;
     font-size: 1.1em;
 }
-
+.gradient-border {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(210,148,100);
+    background: linear-gradient(90deg, rgba(210,148,100,1) 0%, rgba(189,190,101,1) 9%, rgba(118,210,103,1) 19%, rgba(104,210,198,1) 37%, rgba(106,105,210,1) 55%, rgba(150,100,210,1) 71%, rgba(210,100,115,1) 84%, rgba(255,0,146,1) 100%);
+}
 
 /* Top section with nav-menu */
 .container-top {
     display: flex;
-    /* justify-content: space-around;
-    align-items: center; */
     background-color: #000000;
     background-image: url(../images/wave-1817646_1920.png);
     background-size: 100%;
@@ -53,8 +56,8 @@ body {
 /* HTML/CSS section */
 .html-css-grid-container {
     display: grid;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 400px 400px;
+    grid-template-columns: 380px 380px;
+    grid-template-rows: 380px 380px;
     gap: 80px;
     justify-content: center;
     padding: 70px 0;
@@ -87,7 +90,7 @@ body {
 }
 .grid-image-text {
     /* position: absolute; */
-    font-size: 6em;
+    font-size: 5em;
     font-weight: bold;
     margin-top: 40%;
     filter: none;
@@ -123,6 +126,7 @@ body {
 .cards-text {
     padding: 4px;
     font-size: 0.9em;
+    line-height: 1.5em;
 }
 .large-font-h2 {
     font-size: 2.2em;
@@ -180,3 +184,5 @@ body {
 .footer-grid-text {
    padding-right: 60px;
 }
+
+/* End of footer section  */
