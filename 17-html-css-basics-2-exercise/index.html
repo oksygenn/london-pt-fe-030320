@@ -1,77 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon.png"> -->
     <!-- <link rel="stylesheet" href="./styles/normalize.css"> -->
-    <link rel="stylesheet" href="./styles/myindex.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/myindex.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Coders In Hoods || Mini Project || Landing page</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- Top section with nav-menu -->
     <div id="home" class="container-top">
+      <div class="header">
+        <p>Learn how to code HTML and CSS</p>
+        <h1>Coding - HTML and CSS</h1>
+      </div>
 
-        <div class="header">
-            <p>Learn how to code HTML and CSS</p>
-            <h1>Coding - HTML and CSS</h1>
-        </div>
-
-        <div class="nav-menu">
-            <ul>
-                <li><a class="nav-link" href="#home">Home</a></li>
-                <li><a class="nav-link" href="#html-css">HTML5/CSS3</a></li>
-                <li><a class="nav-link" href="#help">Help</a></li>
-                <li><a class="nav-link" href="#about-us">About Us</a></li>
-                <li><a class="nav-link" href="#contact-us">Contact Us</a></li>
-            </ul>
-         </div>
+      <div class="nav-menu">
+        <ul>
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#html-css">HTML5/CSS3</a></li>
+          <li><a class="nav-link" href="#help">Help</a></li>
+          <li><a class="nav-link" href="#about-us">About Us</a></li>
+          <li><a class="nav-link" href="#contact-us">Contact Us</a></li>
+        </ul>
+      </div>
     </div>
+    <!-- End of top section with nav-menu -->
 
+    <!-- HTML/CSS section -->
     <div id="html-css">
-        <div class="grid-container">
-            <div class="grid-image">
-                <p class="grid-image-text">HTML5</p>
-            </div>
-            <div class="grid-item orange-text">
-                <h2>Why Learn HTML?</h2>
-                <p>HTML is the foundation of all web pages. Without HTML, you wouldn't be able to organize text or add images or videos to your web pages. HTML is the beginning of everything you need to know to create engaging web pages!</p>
-            </div>
-            <div class="grid-item green-text">
-                <h2>Why learn CSS?</h2>
-                <p>Without CSS, every web page would be drab plain text and images that flowed straight down the page.<br> With CSS, you can add color and background images and change the layout of your page - your web pages can feel like works of art!</p>
-            </div>
-            <div class="grid-image">
-                <p class="grid-image-text">CSS3</p>
-            </div>
+      <div class="html-css-grid-container">
+        <div class="grid-image">
+            <p class="grid-image-text">HTML5</p>
         </div>
+        <div class="grid-item orange-text">
+          <h2>Why Learn HTML?</h2>
+          <p class="gray-text">
+            HTML is the foundation of all web pages. Without HTML, you wouldn't
+            be able to organize text or add images or videos to your web pages.
+            HTML is the beginning of everything you need to know to create
+            engaging web pages!
+          </p>
+        </div>
+        <div class="grid-item green-text">
+          <h2>Why learn CSS?</h2>
+          <p class="gray-text">
+            Without CSS, every web page would be drab plain text and images that
+            flowed straight down the page.
+            With CSS, you can add color and background images and change the
+            layout of your page - your web pages can feel like works of art!
+          </p>
+        </div>
+        <div class="grid-image"> 
+            <p class="grid-image-text">CSS3</p>
+        </div>
+      </div>
     </div>
+    <!-- End of HTML/CSS section -->
 
-<div class="container">
+    <!-- Cards section -->
+    <div id="help" class="help-container">
+      <div>
+        <h2 class="large-font-h2">The Easiest Way to Learn HTML5</h2>
+        <h4 class="gray-text">You will learn many aspects of styling web pages!</h4>
+      </div>
+      <div class="cards-container">
+        <div class="card-white">
+          <img src="images/adult-code-coding-1181359.jpg" alt="" />
+          <div class="cards-text">
+            <h3>Introduction to HTML</h3>
+            <p class="gray-text">In this course you will learn to style individual.</p>
+          </div>
+        </div>
+        <div class="card-white">
+          <img src="images/code-3637299_1920.jpg" alt="" />
+          <div class="cards-text">
+            <h3>HTML tags</h3>
+            <p class="gray-text">In this course you will learn to style individual.</p>
+          </div>
+        </div>
+        <div class="card-white">
+          <img src="images/access-code-connection-1181467.jpg" alt="" />
+          <div class="cards-text">
+            <h3>HTML fields</h3>
+            <p class="gray-text">In this course you will learn to style individual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  End of cards section  -->
+
+<!-- About Us/Pet Section -->
+    <div id="about-us" class="pet-section">
+      <div>
+        <h2 class="large-font-h2">Coding - HTML and CSS</h2>
+        <h4 class="gray-text">You will learn many aspects of styling web pages!</h4>
+      </div>
+      <div class="pet-photos-grid-container">
+        <div class="pet-photos pet1">
+          <img src="images/minion-2201004_1920.jpg" alt="" />
+        </div>
+        <div class="pet-photos">
+          <img src="images/dog-2583924_1920.jpg" alt="" />
+        </div>
+        <div class="pet-photos">
+          <img src="images/adorable-animal-bed-374898.jpg" alt="" />
+        </div>
+        <div class="pet-photos">
+          <img src="images/adorable-animal-cat-2194261.jpg" alt="" />
+        </div>
+        <div class="pet-photos">
+          <img src="images/bulldog-close-up-coffee-688961.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+<!-- End of About Us/Pet Section -->
+
+    <div id="contact-us" class="footer">
+      <div class="social-media">
+        <!-- <p>Contact Us</p> -->
+        <div>
+        <img src="images/facebook-logo-in-circular-button-outlined-social-symbol.png" alt="">
+    </div>
     <div>
-          <h2>The easiest way to learn HTML5</h2>
-        <p>You will learn many aspects of styling web pages!</p>
+        <img src="images/twitter-circular-button.png" alt="">
     </div>
-    <div class="cards">
-       <div class="card-white">
-           <img src="images/adult-code-coding-1181359.jpg" alt="">
-           <h2>Introduction to HTML</h2>
-           <p>In this course you will learn to style individual</p>
-       </div>
-       <div class="card-white">
-           <img src="images/code-3637299_1920.jpg" alt="">
-           <h2>HTML tags</h2>
-           <p>In this course you will learn to style individual</p>
-       </div>
-       <div class="card-white">
-           <img src="images/access-code-connection-1181467.jpg" alt="">
-           <h2>HTML fields</h2>
-           <p>In this course you will learn to style individual</p>
-       </div>
+    <div>
+        <img src="images/google-plus-circular-button.png" alt="">
     </div>
-</div>
-</body>
+      </div>
+
+      <div class="footer-text">
+        <p>
+          What if Coronavirus hits you before you get ready to go on vacation?
+          The answer is simple... stay home!
+          People are wanting to fly to international destinations....
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
