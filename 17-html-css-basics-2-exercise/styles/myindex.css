@@ -131,7 +131,7 @@ body {
 
 /* End of Help/cards section */
 
-/* Pet section  */
+/* About Us/Pet section  */
 .pet-section {
     text-align: center;
     padding: 50px;
@@ -153,24 +153,30 @@ body {
 .pet-photos:hover {
     opacity: 0.6;
 }
+/* End of About Us/Pet section */
+
 
 /* Footer section */
-.footer {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-around; */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: black;
-    color: red;
+    color: white;
     padding: 40px;
+    text-align: left;
 }
-.footer div {
-    margin: auto;
+.footer-grid-icons {
+    padding-left: 40px;
 }
-
-.footer img {
-    background-color: violet;
+.footer-grid-icons ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 12px 12px 12px 0px;
 }
-
-.footer p {
-    background-color: turquoise;
+.footer-grid-icons img {
+    padding: 5px;
+}
+.footer-grid-text {
+   padding-right: 60px;
 }
