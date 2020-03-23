@@ -37,7 +37,7 @@ console.log(animals);
  */
 const wildAnimals = ["lion"];
 /**
- * create an array "wildAnimals" with "giraffe" and "elephant"
+ * create an array "moreWildAnimals" with "giraffe" and "elephant"
  */
 const moreWildAnimals = ["giraffe", "elephant"];
 /**
