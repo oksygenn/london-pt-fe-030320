@@ -3,7 +3,7 @@
  * create an array "carBrands"
  * and assign to it ["Mercedes", "Volvo", "BMW", "Reno", "Vauxhall", "Land Rover"]
  */
-const carBrands = ["Mercedes", "Volvo", "BMW", "Citroen", "Vauxhall", "Reno"];
+const carBrands = ["Mercedes", "Volvo", "BMW", "Reno", "Vauxhall", "Land Rover"];
 console.log(carBrands);
 /**
  * Exercise 1
@@ -41,6 +41,6 @@ console.log(vauxhallIndex, carBrands);
  *
  * * PS: console.log() the result to see the difference
  */
-const citroenIndex = carBrands.indexOf("Citroen");
-carBrands.splice(citroenIndex, 1, "Rolls-Royce");
-console.log(citroenIndex, carBrands);
+const bmwIndex = carBrands.indexOf("BMW");
+carBrands.splice(bmwIndex, 1, "Rolls-Royce");
+console.log(bmwIndex, carBrands);
