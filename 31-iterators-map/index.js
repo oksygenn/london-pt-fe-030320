@@ -9,7 +9,12 @@
  * array of numbers, convert all negatives to positives and return
  * a new array.
  */
-
+const convertToPositive = arrayOfNumbers => {
+  const result = arrayOfNumbers.map(element => {
+    return Math.abs(element);
+  });
+  return result;
+};
 /**
  * Exercise 2
  *
@@ -22,14 +27,22 @@
  *   {name: 'John', age: 25}
  * ]) will return ['Alex', 'John']
  */
-
+const getAllNames = arrayOfUsers => {
+  const names = arrayOfUsers.map(element => {
+    return element["name"];
+  });
+  return names;
+};
 /**
  * Exercise 3
  *
  * create a function {greetAll} that takes array of names as a parameter
  * and return a new array of greetings "Hi, {name}!"
  */
-
+const greetAll = arrOfNames =>
+  arrOfNames.map(name => {
+    return `Hi, ${name}!`;
+  });
 /**
  * Exercise 4
  *
@@ -37,3 +50,11 @@
  * and multiply all numbers inside array by 5 and return the whole array
  * with multiplied numbers
  */
+
+const multiplyAllNumbers = array =>
+  array.map(element => {
+    if (typeof element == "number") {
+      return element * 5;
+    }
+    return element;
+  });
