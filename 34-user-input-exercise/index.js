@@ -5,13 +5,22 @@
  *
  * ask user for a name and assign a response to variable {name}
  */
+const chalk = require("chalk");
+const readlineSync = require("readline-sync");
 
-//===== DO NOT TOUCH THIS BLOCK =====
-console.log(`Hi ${name}!`);
+const logAnswer = message => console.log(chalk.blue(message));
+const questionColor = message => chalk.yellow(message);
+
+const name = readlineSync.question(questionColor("What is your name? "), {
+  limit: input => input !== ""
+});
+
+// ===== DO NOT TOUCH THIS BLOCK =====
+logAnswer(`Hi ${name}!`);
 console.log("=====================");
 console.log(`Let me do math for you!`);
 console.log("=====================");
-//===================================
+// ===================================
 
 /**
  * Exercise 2
@@ -24,6 +33,21 @@ console.log("=====================");
  * you get correct symbol
  */
 
+const operators = ["+", "-", "/", "*"];
+
+let selectedSymbol;
+
+while (!operators.includes(selectedSymbol)) {
+  selectedSymbol = readlineSync.question(
+    questionColor(
+      `Choose math operation from these ${operators.join(
+        ", "
+      )} what do you choose? `
+    )
+  );
+}
+
+logAnswer(`Ok, you chose ${selectedSymbol} `);
 /**
  * Exercise 3
  *
@@ -32,7 +56,10 @@ console.log("=====================");
  * NOTE: if the user will respond with wrong value, ask again, until
  * you get a number
  */
-
+const number1 = readlineSync.questionFloat(
+  questionColor("Please choose first number: ")
+);
+logAnswer(`First number is ${number1}`);
 /**
  * Exercise 4
  *
@@ -41,7 +68,10 @@ console.log("=====================");
  * NOTE: if the user will respond with wrong value, ask again, until
  * you get a number
  */
-
+const number2 = readlineSync.questionFloat(
+  questionColor("Please choose second number: ")
+);
+logAnswer(`Second number is ${number2}`);
 /**
  * Exercise 5
  *
@@ -50,6 +80,6 @@ console.log("=====================");
  *
  * show the result to the user
  */
-
+const result = eval(`${number1} ${selectedSymbol} ${number2}`);
 console.log("=====================");
-console.log(`Here you go, the result is ${result}`);
+logAnswer(questionColor(`Here you go, the result is ${result}`));
