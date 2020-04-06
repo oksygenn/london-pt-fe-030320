@@ -8,7 +8,11 @@
  * passed each element and the index.
  *
  */
-
+const forEach = (array, callback) => {
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i], i);
+  }
+};
 /**
  * Exercise #2
  *
@@ -22,7 +26,14 @@
  * time the callback was invoked.
  *
  */
-
+const map = (array, callback) => {
+  const myArray = [];
+  for (let i = 0; i < array.length; i++) {
+    let result = callback(array[i], i);
+    myArray.push(result);
+  }
+  return myArray;
+};
 /**
  * Exercise #3
  *
@@ -36,7 +47,16 @@
  * callback returned a truthy value.
  *
  */
-
+const filter = (array, callback) => {
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    let result = callback(array[i], i);
+    if (result) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+};
 /**
  * Exercise #4
  *
@@ -50,7 +70,14 @@
  * truthy value.
  *
  */
-
+const find = (array, callback) => {
+  for (let i = 0; i < array.length; i++) {
+    const result = callback(array[i], i);
+    if (result) {
+      return array[i];
+    }
+  }
+};
 /**
  * Exercise #5
  *
@@ -64,7 +91,14 @@
  * callback returns a truthy value.
  *
  */
-
+const findIndex = (array, callback) => {
+  for (let i = 0; i < array.length; i++) {
+    const result = callback(array[i], i);
+    if (result) {
+      return i;
+    }
+  }
+};
 /**
  * Exercise #6
  *
@@ -79,7 +113,15 @@
  * a truthy value.
  *
  */
-
+const every = (array, callback) => {
+  for (let i = 0; i < array.length; i++) {
+    const result = callback(array[i], i);
+    if (!result) {
+      return false;
+    }
+  }
+  return true;
+};
 /**
  * Exercise #7
  *
@@ -94,6 +136,15 @@
  * a truthy value.
  *
  */
+const some = (array, callback) => {
+  for (let i = 0; i < array.length; i++) {
+    const result = callback(array[i], i);
+    if (result) {
+      return true;
+    }
+  }
+  return false;
+};
 
 /**
  * Exercise #8
@@ -116,3 +167,10 @@
  * value.
  *
  */
+const reduce = (array, callback, initialValue = 0) => {
+  let accumulator = initialValue;
+  for (let i = 0; i < array.length; i++) {
+    accumulator = callback(accumulator, array[i], i);
+  }
+  return accumulator;
+};
