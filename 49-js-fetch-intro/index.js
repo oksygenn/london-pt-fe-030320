@@ -18,6 +18,42 @@ const input = document.querySelector("input");
  * `Request failed with status code: {errorCode}`
  */
 
+const getResponse = (url) => {
+  fetch(url).then(
+    (response) => {
+      if (response.status === 200) {
+        renderSuccess(url);
+      } else {
+        renderError(response.status);
+      }
+    },
+    (reason) => renderError(reason)
+  );
+};
+
+const renderSuccess = (link) => {
+  result.innerHTML = `Valid link! <a href="${link}" target="_blank">Link</a>`;
+};
+
+const renderError = (errorCode) => {
+  result.innerText = `Request failed with status code: ${errorCode}`;
+};
+
+const main = () => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const userInput = input.value;
+    getResponse(userInput);
+  });
+
+  input.addEventListener("focus", () => {
+    input.value = "";
+    result.innerText = "";
+  });
+};
+
+main();
+
 /**
  * Description of the application:
  *
@@ -31,3 +67,5 @@ const input = document.querySelector("input");
  * 5. When I focus on input, it should clear my input and hide
  * {result}
  */
+
+// const mainFunc = () => {};
