@@ -28,7 +28,7 @@ const myPromise = new Promise((resolve, reject) => {
 });
 ```
 
-The two functions we've recieved in our callback are for resolving or rejecting the promise. We resolve the promise when the async action is completed successfully and we reject the promise if something has gone wrong.
+The two functions we've received in our callback are for resolving or rejecting the promise. We resolve the promise when the async action is completed successfully and we reject the promise if something has gone wrong.
 
 Here we will resolve the promise when the counter is greater than 10.
 

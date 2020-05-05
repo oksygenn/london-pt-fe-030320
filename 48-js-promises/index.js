@@ -20,12 +20,18 @@ const ingredients = [
  * {ingredient} object
  *
  */
-
+const asyncCookIngredient = async (ingredient) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(ingredient);
+    }, ingredient.time);
+  });
+};
 
 /**
  * Exercise 2
  *
- * create a function {asyncCookMeal} which will recieve an
+ * create a function {asyncCookMeal} which will receive an
  * array of {ingredientsToCook} and call {asyncCookIngredient} for
  * each ingredient
  *
@@ -41,3 +47,60 @@ const ingredients = [
  * }
  *
  */
+
+const asyncCookMeal = async (ingredientsToCook) => {
+  const totalTime = ingredientsToCook.reduce(
+    (acc, ingredient) => acc + ingredient.time,
+    0
+  );
+
+  const ingredientNames = ingredientsToCook.map(
+    (ingredient) => ingredient.name
+  );
+
+  const result = { ingredientNames: ingredientNames, totalTime: totalTime };
+
+  await Promise.all(
+    ingredientsToCook.map((ingredient) => asyncCookIngredient(ingredient))
+  );
+  return Promise.resolve(result);
+};
+
+// second version:
+
+// const asyncCookMeal = async (ingredientsToCook) => {
+//   let totalTime = 0;
+//   let ingredientNames = [];
+
+//   for (let ingredient of ingredientsToCook) {
+//     ingredientNames.push(ingredient.name);
+//     totalTime = totalTime + ingredient.time;
+//   }
+
+//   const result = { ingredientNames: ingredientNames, totalTime: totalTime };
+
+//   await Promise.all(
+//     ingredientsToCook.map((ingredient) => asyncCookIngredient(ingredient))
+//   );
+//   return Promise.resolve(result);
+// };
+
+// first version:
+
+// const asyncCookMeal = async (ingredientsToCook) => {
+//   let totalTime = 0;
+//   let ingredientNames = [];
+
+//   return Promise.all(
+//     ingredientsToCook.map((ingredient) => asyncCookIngredient(ingredient))
+//   ).then(() => {
+//     return new Promise((resolve) => {
+//       for (let ingredient of ingredientsToCook) {
+//         asyncCookIngredient(ingredient);
+//         ingredientNames.push(ingredient.name);
+//         totalTime = totalTime + ingredient.time;
+//       }
+//       resolve({ ingredientNames: ingredientNames, totalTime: totalTime });
+//     });
+//   });
+// };
