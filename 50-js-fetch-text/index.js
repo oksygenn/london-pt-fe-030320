@@ -17,7 +17,25 @@ const input = document.querySelector("input");
  * When you receive a response, render the
  * string in {.result} element
  */
+const getResponse = (link) => {
+  fetch(link)
+    .then((response) => response.text())
+    .then((text) => (result.innerText = text));
+};
 
+const myFunc = () => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    getResponse(input.value);
+  });
+
+  input.addEventListener("focus", () => {
+    input.value = "";
+    result.innerText = "";
+  });
+};
+
+myFunc();
 
 /**
  * Description of the application:
@@ -27,4 +45,3 @@ const input = document.querySelector("input");
  * 2. see the body of the response in {.result} element
  * 3. focus on input, clearing my previous input and hiding {.result} element
  */
-
