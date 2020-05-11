@@ -24,6 +24,7 @@
 	},
 	"dependencies": {
 		"json-server": "^0.16.1",
+		"node-fetch": "^2.6.0",
 		"node-fetch-polyfill": "^2.0.6"
 	}
 }
