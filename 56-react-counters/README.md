@@ -72,7 +72,7 @@ const Terms = () => {
       <p>Do you agree to terms? {agreeToTerms ? "Yes I agree" : "No thanks"}</p>
       <div>
         <button onClick={acceptTerms}>I agree</button>
-        <button onClick={declineTerms}>I do not sagree</button>
+        <button onClick={declineTerms}>I do not agree</button>
       </div>
     </div>
   );

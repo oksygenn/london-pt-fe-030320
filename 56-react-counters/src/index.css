@@ -1,13 +1,72 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(224, 230, 140);
+  padding: 2em;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.counter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 3em 1em;
+  margin: 1em;
+  transition: 0.2s;
+  background-color: rgb(68, 175, 114);
+}
+
+.counters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  width: 50px;
+  line-height: 2em;
+  margin: 0 1em;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  background-color: #b2b94a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 4px;
+  outline: none;
+}
+
+.newCounter {
+  display: block;
+  margin: 2em auto;
+  border: none;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #61592d;
+  color: #fff;
+  border-radius: 4px;
+  width: 150px;
+  line-height: 2em;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
 }
