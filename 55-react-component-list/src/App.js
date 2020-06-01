@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import createList from "./list";
 
 const APP_TITLE = "Awesome Pet Shop";
 
@@ -17,7 +18,13 @@ const APP_TITLE = "Awesome Pet Shop";
 const App = () => {
   const animals = ["cat", "dog", "giraffe", "pig", "lion", "rabbit"];
 
-  return <div className="app"></div>;
+  return (
+    <div className="app">
+      <h1>{APP_TITLE}</h1>
+      <p>{new Date().toLocaleDateString()}</p>
+      {createList(animals)}
+    </div>
+  );
 };
 
 export default App;
