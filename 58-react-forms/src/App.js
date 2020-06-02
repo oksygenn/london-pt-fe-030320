@@ -39,19 +39,22 @@ const App = () => {
 
   return (
     <div>
-      <h1>{inputText}</h1>
-      <input
-        type="text"
-        className="first"
-        value={inputText}
-        onChange={doSomething}
-      />
-      <input
-        type="text"
-        className="second"
-        value={inputText}
-        onChange={doSomething}
-      />
+      <div className="top">
+        <h1>{inputText}</h1>
+        <input
+          type="text"
+          className="first"
+          value={inputText}
+          onChange={doSomething}
+        />
+        <input
+          type="text"
+          className="second"
+          value={inputText}
+          onChange={doSomething}
+        />
+      </div>
+      <UserForm />
     </div>
   );
 };

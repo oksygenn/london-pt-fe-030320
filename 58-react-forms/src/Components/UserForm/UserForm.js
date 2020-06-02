@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { postUser } from "../../fetch";
 const UserForm = () => {
   const [user, setUser] = useState({
     firstName: "",
@@ -8,26 +8,80 @@ const UserForm = () => {
     gender: "",
   });
 
+  const handleChange = (event) => {
+    setUser({
+      ...user,
+      [event.target.name]:
+        event.target.type === "number"
+          ? parseInt(event.target.value)
+          : event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (user.firstName && user.lastName !== "") {
+      postUser(user);
+    }
+
+    setUser({
+      firstName: "",
+      lastName: "",
+      age: 0,
+      gender: "",
+    });
+  };
+
   return (
-    <form>
-      <input type="text" className="firstName" />
-      <input type="text" className="lastName" />
-      <input type="number" className="age" />
-      <input type="select" className="gender" />
-    </form>
+    <div className="state">
+      <form onSubmit={handleSubmit} className="userForm">
+        <input
+          onChange={handleChange}
+          type="text"
+          placeholder="Name"
+          className="firstName"
+          name="firstName"
+          value={user.firstName}
+          required
+        />
+        <input
+          onChange={handleChange}
+          type="text"
+          placeholder="Surname"
+          className="lastName"
+          name="lastName"
+          value={user.lastName}
+          required
+        />
+        <input
+          onChange={handleChange}
+          type="number"
+          min="0"
+          max="111"
+          className="age"
+          name="age"
+          value={parseInt(user.age)}
+          required
+        />
+        <select
+          onChange={handleChange}
+          type="select"
+          className="gender"
+          name="gender"
+          value={user.gender}
+          required
+        >
+          <option>Please choose an option</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <button type="submit" onSubmit={handleSubmit}>
+          Submit
+        </button>
+      </form>
+    </div>
   );
 };
 
 export default UserForm;
-/* 1. Create component UserForm.
- * 2. UserForm needs to have state {user} with properties:
- * 	- firstName, - lastName, - age, - gender.
- * 3. UserForm should contain 4 inputs:
- * - firstName(type: "text", class: firstName)
- * - lastName(type: "text", class: lastName)
- * - age(type: "number", class: age)
- * - gender(type="select" class: gender,)
- * 4. When the value of any input changes, user state needs to reflect that.
- * 5. On form submit post your user to database. Validate data.
- * If any value is missing, you shouldn't post user to database.
- * */

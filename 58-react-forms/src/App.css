@@ -1,0 +1,44 @@
+.states {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.top {
+  background-color: rgb(164, 217, 224);
+  height: 20vh;
+}
+
+.top h1 {
+  margin: 1em;
+}
+
+.top input {
+  margin: 1em;
+  padding: 0.5em;
+  border: 1px solid rgb(17, 4, 94);
+}
+
+.userForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(11, 135, 184);
+}
+
+input,
+select,
+button {
+  width: 80%;
+  max-width: 250px;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid rgb(5, 7, 114);
+  border-radius: 4px;
+}
+
+button {
+  color: #fff;
+  background-color: rgb(23, 3, 68);
+  font-size: 1em;
+}
