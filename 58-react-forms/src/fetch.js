@@ -14,7 +14,7 @@ export const postUser = async (obj) => {
       if (res.ok) {
         return res.json();
       } else {
-        throw "Oops something went wrong!";
+        throw "Oops! Something went wrong!";
       }
     })
     .catch((error) => error);
