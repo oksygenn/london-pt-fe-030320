@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
+import Player from "./components/Team/Player/Player";
+import Team from "./components/Team/Team";
 
 /**
  * Exercise:
@@ -35,8 +37,44 @@ const App = () => {
     "Andrew",
     "Mat",
   ]);
+  const [team1, setTeam1] = useState([]);
+  const [team2, setTeam2] = useState([]);
 
-  return <div className="app"></div>;
+  const moveToTeam = (player, team, setTeam) => {
+    const newPlayers = players.filter((el) => el !== player);
+    setPlayers(newPlayers);
+    setTeam([...team, player]);
+  };
+
+  return (
+    <div className="app">
+      <div className="players">
+        Players:
+        <ul>
+          {players.map((player) => (
+            <li>
+              <Player player={player} />
+              <button onClick={() => moveToTeam(player, team1, setTeam1)}>
+                Team 1
+              </button>
+              <button onClick={() => moveToTeam(player, team2, setTeam2)}>
+                Team 2
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="team-one">
+        Team 1:
+        <Team players={team1} />
+      </div>
+      <div className="team-two">
+        Team 2:
+        <Team players={team2} />
+      </div>
+    </div>
+  );
 };
 
 export default App;

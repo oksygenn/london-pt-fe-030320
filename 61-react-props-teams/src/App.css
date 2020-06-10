@@ -1,13 +1,18 @@
 .app {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  background-color: darkgoldenrod;
 }
 
 ul {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
+}
+
+span {
+  margin: 0 2em;
 }

@@ -1,7 +1,11 @@
 import React from "react";
 
-const Player = () => {
-  return <p></p>;
+const Player = (props) => {
+  return (
+    <span className="player" key={props.player}>
+      {props.player}
+    </span>
+  );
 };
 
 export default Player;
