@@ -1,15 +1,25 @@
 .app {
-    max-width: 30em;
-    margin: auto;
-    padding: 1em;
-    border: grey solid 1px;
-    background: white;
+  max-width: 30em;
+  margin: 20% auto;
+  padding: 1em;
+  border: rgb(106, 107, 177) solid 1px;
+  border-radius: 40px;
+  background: rgb(128, 106, 194);
+}
+
+li {
+  list-style: none;
 }
 
 ul > li > span {
-    width: 6em;
-    display: inline-block;
+  width: 6em;
+  display: inline-block;
 }
 ul > li > input {
-    width: 4em;
+  width: 4em;
 }
+/* 
+button {
+  padding: 4px;
+  margin: 0.3em;
+} */
