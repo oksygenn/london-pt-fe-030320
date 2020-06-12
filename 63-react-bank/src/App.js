@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import { Switch, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Wallet from "../src/components/Wallet/Wallet";
