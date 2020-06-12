@@ -8,7 +8,7 @@
 
 .login_form_wrapper {
   width: 400px;
-  height: 400px;
+  height: auto;
   min-width: 300px;
   border-radius: 8px;
   background-color: #3d4046;
@@ -18,8 +18,7 @@
 form.login_form {
   padding: 2em 5em 5em 5em;
 
-  input[type="email"],
-  input[type="password"] {
+  .form_inputs {
     display: inline-block;
     width: 100%;
     padding: 8px 1px 3px 1px;
@@ -32,8 +31,8 @@ form.login_form {
     outline: transparent;
   }
 
-  input[type="submit"] {
-    background-color: #858788;
+  .form_btn {
+    background-color: #f4613a;
     width: 100%;
     height: 2em;
     margin-bottom: 1em;

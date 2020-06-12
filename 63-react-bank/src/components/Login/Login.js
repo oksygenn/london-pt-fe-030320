@@ -9,13 +9,23 @@ const Login = () => {
       <Header />
 
       <Form title="Login">
-        <label for="login_email">Email</label>
-        <input type="email" name="login_email" required></input>
-        <label for="login_password" required>
+        <label htmlFor="form_email">Email</label>
+        <input
+          type="email"
+          name="form_email"
+          className="form_inputs"
+          required
+        ></input>
+        <label htmlFor="form_password" required>
           Password
         </label>
-        <input type="password" name="login_password"></input>
-        <input type="submit" value="Login"></input>
+        <input
+          type="password"
+          name="form_password"
+          className="form_inputs"
+          required
+        ></input>
+        <input type="submit" value="Login" className="form_btn"></input>
         <a href="#">Sign Up</a>
       </Form>
     </div>
