@@ -64,15 +64,16 @@ form.login_form {
 }
 
 .login_form_top {
-  text-align: right;
-
-  .login_form_hr-line {
-    height: 1.5px;
-    background-color: #f4613a;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
 
   .login_form_span {
     display: inline-block;
-    margin: 1em 1.5em 1em 0;
+    // margin: 1em 1.5em 1em 0;
   }
+}
+.login_form_hr-line {
+  height: 1.5px;
+  background-color: #f4613a;
 }

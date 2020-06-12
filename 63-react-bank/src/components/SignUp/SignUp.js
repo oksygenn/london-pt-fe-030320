@@ -2,12 +2,13 @@ import React from "react";
 import "./SignUp.scss";
 import Header from "../Header/Header";
 import { Form } from "../Common/Form";
+import { ImageUpload } from "../ImageUpload/ImageUpload";
 
 export const SignUp = () => {
   return (
     <>
       <Header />
-      <Form title="Sign Up">
+      <Form title="Sign Up" backButton={true}>
         <label htmlFor="form_first_name">First name</label>
         <input
           type="text"
@@ -48,6 +49,7 @@ export const SignUp = () => {
           required
         ></input>
 
+        <ImageUpload />
         <input type="submit" value="Sign Up" className="form_btn"></input>
       </Form>
     </>
