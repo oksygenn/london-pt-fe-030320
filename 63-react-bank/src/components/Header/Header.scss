@@ -1,10 +1,11 @@
 .nav_menu {
   padding: 0 1em;
+  display: flex;
+  text-transform: uppercase;
 
   a {
     text-decoration: none;
     color: white;
-    text-transform: uppercase;
     margin: 0 0.5em;
   }
 }

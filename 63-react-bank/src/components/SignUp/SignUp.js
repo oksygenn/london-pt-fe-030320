@@ -51,6 +51,7 @@ export const SignUp = () => {
 
         <ImageUpload />
         <input type="submit" value="Sign Up" className="form_btn"></input>
+        <img src="./images/man_1.svg" alt="avatar" />
       </Form>
     </>
   );

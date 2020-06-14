@@ -8,7 +8,7 @@ const Login = () => {
     <div className="login_page">
       <Header />
 
-      <Form title="Login" backButton={false}>
+      <Form action="#" title="Login" backButton={false}>
         <label htmlFor="form_email">Email</label>
         <input
           type="email"
