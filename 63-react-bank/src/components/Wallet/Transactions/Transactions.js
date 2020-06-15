@@ -3,8 +3,8 @@ import "./Transactions.scss";
 import TransactionItem from "./TransactionItem";
 import { getTransactions } from "../../../API/mock";
 
-const Transactions = () => {
-  const [transactions] = useState(getTransactions());
+const Transactions = (props) => {
+  const [transactions] = useState(props.source);
 
   return (
     <div className="transactions">
@@ -27,7 +27,7 @@ const Transactions = () => {
           ))}
         </div>
       </div>
-      <div className="date_header">Yesterday</div>
+      <div className="date_header colorized">Yesterday</div>
     </div>
   );
 };

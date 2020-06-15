@@ -76,3 +76,58 @@ export const getTransactions = () => {
     },
   ];
 };
+
+export const getSavingsTransactions = () => {
+  return [
+    {
+      date: "2020/06/01",
+      title: "Direct deposit",
+      amount: 250,
+    },
+    {
+      date: "2020/06/04",
+      title: "Direct deposit",
+      amount: 25,
+    },
+    {
+      date: "2020/06/08",
+      title: "Direct deposit",
+      amount: 440,
+    },
+    {
+      date: "2020/06/06",
+      title: "Rounded expense",
+      amount: 0.44,
+    },
+    {
+      date: "2020/06/03",
+      title: "Rounded expense",
+      amount: 0.12,
+    },
+    {
+      date: "2020/06/10",
+      title: "Rounded expense",
+      amount: 0.46,
+    },
+    {
+      date: "2020/06/13",
+      title: "Rounded expense",
+      amount: 0.34,
+    },
+    {
+      date: "2020/06/11",
+      title: "Direct deposit",
+      amount: 100,
+    },
+    {
+      date: "2020/06/08",
+      title: "Rounded expense",
+      amount: 0.78,
+    },
+    {
+      date: "2020/06/14",
+      title: "Direct deposit",
+      amount: 330,
+    },
+  ];
+};
