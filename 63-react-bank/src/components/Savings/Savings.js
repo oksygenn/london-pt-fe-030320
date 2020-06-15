@@ -5,11 +5,16 @@ import Header from "../Header/Header";
 import { getSavingsTransactions, getSavingsBalance } from "../../API/mock";
 import Transactions from "../Wallet/Transactions/Transactions";
 
+const buttons = {
+  primary: "pay in",
+  secondary: "pay out",
+};
+
 const Savings = () => {
   return (
     <div className="savings">
       <Header signedIn={true} />
-      <Balance source={getSavingsBalance()} buttons={true} />
+      <Balance source={getSavingsBalance()} buttons={buttons} />
       <Transactions
         dateVisible={true}
         detailsExpandable={false}

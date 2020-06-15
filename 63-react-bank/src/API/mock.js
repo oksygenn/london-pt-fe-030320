@@ -12,6 +12,12 @@ export const getSavingsBalance = () => {
   };
 };
 
+export const getLoansBalance = () => {
+  return {
+    balance: -5678.0,
+  };
+};
+
 export const getTransactions = () => {
   return [
     {
@@ -128,6 +134,71 @@ export const getSavingsTransactions = () => {
       date: "2020/06/14",
       title: "Direct deposit",
       amount: 330,
+    },
+  ];
+};
+
+export const getLoansTransactions = () => {
+  return [
+    {
+      title: "You paid back",
+      date: "2020/05/04",
+      amount: 300,
+    },
+    {
+      title: "You paid back",
+      date: "2020/05/08",
+      amount: 100,
+    },
+    {
+      title: "Loan",
+      date: "2020/06/03",
+      amount: 100,
+    },
+    {
+      title: "You paid back",
+      date: "2020/06/14",
+      amount: 100,
+    },
+    {
+      title: "Loan",
+      date: "2020/06/03",
+      amount: 600,
+    },
+    {
+      title: "You paid back",
+      date: "2020/04/29",
+      amount: 20,
+    },
+    {
+      title: "Loan",
+      date: "2020/06/23",
+      amount: 400,
+    },
+    {
+      title: "Loan",
+      date: "2020/06/15",
+      amount: 450,
+    },
+    {
+      title: "Loan",
+      date: "2020/05/04",
+      amount: 300,
+    },
+    {
+      title: "Loan",
+      date: "2020/04/04",
+      amount: 100,
+    },
+    {
+      title: "You paid back",
+      date: "2020/05/18",
+      amount: 600,
+    },
+    {
+      title: "Loan",
+      date: "2020/04/01",
+      amount: 1300,
     },
   ];
 };

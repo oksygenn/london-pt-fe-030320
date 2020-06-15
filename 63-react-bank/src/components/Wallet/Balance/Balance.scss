@@ -60,3 +60,45 @@ input[type="text"] {
   padding: 0 0.5em;
   color: white;
 }
+
+.balance_left_border {
+  position: absolute;
+  width: 3px;
+  height: 80px;
+  margin: 0.5em 0 0 1em;
+  border-radius: 7px;
+}
+
+.balance_btn {
+  width: 70px;
+  height: 25px;
+  border: none;
+  border-radius: 7px;
+  margin: 0.6em;
+  font-weight: 800;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.balance_flex_item_2 {
+  display: flex;
+  flex-direction: column;
+
+  .balance_btn:hover {
+    opacity: 0.7;
+  }
+}
+
+.balance_btn_2 {
+  background-color: gray;
+}
+
+.item_date {
+  font-size: 0.6em;
+  font-weight: 200;
+}
+
+.balance_expanded {
+  padding: 0 1em;
+}

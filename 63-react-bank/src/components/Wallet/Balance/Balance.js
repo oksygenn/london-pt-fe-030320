@@ -22,15 +22,15 @@ const Balance = (props) => {
             <>
               <button
                 onClick={toggleDetails}
-                className="balance_btn balance_btn_1"
+                className="balance_btn balance_btn_1 colorized"
               >
-                pay in
+                {props.buttons.primary}
               </button>
               <button
                 onClick={toggleDetails}
                 className="balance_btn balance_btn_2"
               >
-                pay out
+                {props.buttons.secondary}
               </button>
             </>
           ) : (

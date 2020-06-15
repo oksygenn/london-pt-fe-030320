@@ -1,0 +1,11 @@
+@import "../../App.scss";
+
+.loans {
+  .colorized {
+    background-color: $loans-details-color;
+  }
+
+  .balance_btn {
+    font-size: 0.57em;
+  }
+}

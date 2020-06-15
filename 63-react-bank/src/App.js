@@ -5,6 +5,7 @@ import Login from "./components/Login/Login";
 import Wallet from "../src/components/Wallet/Wallet";
 import { SignUp } from "./components/SignUp/SignUp";
 import Savings from "./components/Savings/Savings";
+import Loans from "./components/Loans/Loans";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />
         <Route path="/savings" component={Savings} />
+        <Route path="/loans" component={Loans} />
       </Switch>
     </div>
   );
