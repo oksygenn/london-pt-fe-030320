@@ -10,7 +10,11 @@ const Savings = () => {
     <div className="savings">
       <Header signedIn={true} />
       <Balance buttons={true} />
-      <Transactions source={getSavingsTransactions()} />
+      <Transactions
+        dateVisible={true}
+        detailsExpandable={false}
+        source={getSavingsTransactions()}
+      />
     </div>
   );
 };

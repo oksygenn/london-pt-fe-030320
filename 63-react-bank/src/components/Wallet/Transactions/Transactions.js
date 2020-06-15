@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Transactions.scss";
 import TransactionItem from "./TransactionItem";
-import { getTransactions } from "../../../API/mock";
+// import { getTransactions } from "../../../API/mock";
 
 const Transactions = (props) => {
   const [transactions] = useState(props.source);
@@ -23,7 +23,11 @@ const Transactions = (props) => {
 
         <div className="items_container">
           {transactions.map((el) => (
-            <TransactionItem transaction={el} />
+            <TransactionItem
+              transaction={el}
+              dateVisible={props.dateVisible}
+              detailsExpandable={props.detailsExpandable}
+            />
           ))}
         </div>
       </div>

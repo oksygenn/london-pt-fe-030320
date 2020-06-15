@@ -1,14 +1,14 @@
 export const getBalance = () => {
   return {
     balance: 3830.21,
-    date: Date.now().toLocaleString(),
+    date: new Date().toLocaleDateString(),
   };
 };
 
 export const getSavingsBalance = () => {
   return {
     balance: 7345.78,
-    date: Date.now().toLocaleString(),
+    date: new Date().toLocaleDateString(),
   };
 };
 
