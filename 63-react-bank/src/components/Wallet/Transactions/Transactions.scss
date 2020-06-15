@@ -12,12 +12,13 @@
   );
 
   .internal_wrapper {
-    padding: 1em;
+    padding: 0.5em;
     margin: 1em;
 
     .header {
       display: flex;
       justify-content: space-between;
+      padding: 0.5em 0;
 
       .header_arrows {
         display: flex;
@@ -35,12 +36,42 @@
     width: 100%;
     height: 1px;
     background-color: rgba(133, 135, 136, 0.6);
-    margin: 1em 0;
+    margin: 0 0 0.5em 0;
   }
 
-  .item_wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.7em 0;
+  .items_container {
+    .item_wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5em 0;
+      border-radius: 7px;
+    }
+
+    .transaction_details {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      font-size: 0.7em;
+      color: rgb(141, 138, 138);
+    }
   }
+  .selected {
+    background-color: rgb(34, 33, 33);
+    padding: 0.5em;
+    border-radius: 7px;
+    margin: 0.5em -0.5em;
+  }
+}
+
+.item_hover:hover {
+  background-color: rgb(80, 78, 78);
+  margin: 0 -0.5em;
+}
+
+.date_header {
+  background-color: #f4613a;
+  padding: 0.7em;
+  font-weight: 600;
+  font-size: 0.8em;
+  text-transform: uppercase;
 }

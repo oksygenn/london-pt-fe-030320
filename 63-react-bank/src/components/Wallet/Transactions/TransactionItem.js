@@ -4,18 +4,28 @@ const TransactionItem = (props) => {
   const [detailsVisible, setDetailsVisible] = useState(false);
 
   return (
-    <>
+    <div className={detailsVisible ? "selected" : ""}>
       <div
         onClick={() => {
           setDetailsVisible(!detailsVisible);
         }}
-        className="item_wrapper"
+        className={!detailsVisible ? "item_wrapper item_hover" : "item_wrapper"}
       >
-        <p className="item_name">Marks &amp; Spencer</p>
-        <p className="item_price">-£8.64</p>
+        <p className="item_name">{props.transaction.title}</p>
+        <p className="item_price">{`£${props.transaction.amount}`}</p>
       </div>
-      {detailsVisible ? <div>Hello World</div> : ""}
-    </>
+      {detailsVisible ? (
+        <>
+          <div className="hr_line"></div>
+          <div className="transaction_details">
+            <p>{props.transaction.date}</p>
+            <p>{props.transaction.details}</p>
+          </div>
+        </>
+      ) : (
+        ""
+      )}
+    </div>
   );
 };
 
