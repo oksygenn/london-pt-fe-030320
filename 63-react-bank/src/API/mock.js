@@ -5,6 +5,13 @@ export const getBalance = () => {
   };
 };
 
+export const getSavingsBalance = () => {
+  return {
+    balance: 7345.78,
+    date: Date.now().toLocaleString(),
+  };
+};
+
 export const getTransactions = () => {
   return [
     {

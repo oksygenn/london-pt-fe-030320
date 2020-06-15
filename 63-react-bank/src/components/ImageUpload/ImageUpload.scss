@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 .upload_avatar-wrapper {
   // display: block;
   margin: 1em 0 2em 0;
@@ -11,7 +13,7 @@ input[type="file"] {
 }
 
 input[type="file"] + label {
-  background: #f15d22;
+  background: $main-details-color;
   border: none;
   border-radius: 5px;
   color: #fff;

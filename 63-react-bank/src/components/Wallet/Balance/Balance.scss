@@ -1,3 +1,5 @@
+@import "../../../App.scss";
+
 .balance_wrapper {
   position: relative;
   width: 400px;
@@ -14,15 +16,12 @@
   .balance_internal_wrapper {
     position: relative;
     display: flex;
-    flex-direction: column;
-
+    justify-content: space-between;
     padding: 1em;
     margin: 1em;
 
     .balance_flex_item_1 {
-      display: flex;
-      justify-content: space-between;
-      text-align: end;
+      display: block;
 
       .balance_numbers {
         font-size: 2em;
@@ -31,15 +30,20 @@
         margin: 0;
       }
 
-      img {
-        width: 50%;
+      .balance_text {
+        font-size: 0.8em;
       }
     }
 
     .balance_flex_item_2 {
-      display: flex;
-      justify-content: space-between;
+      display: block;
       font-size: 0.6em;
+      text-align: end;
+
+      img {
+        width: 42px;
+        height: 36px;
+      }
     }
   }
 }
@@ -50,5 +54,5 @@
   height: 80%;
   margin: 0.5em 0 0 0.5em;
   border-radius: 7px;
-  background-color: #f4613a;
+  background-color: $main-details-color;
 }

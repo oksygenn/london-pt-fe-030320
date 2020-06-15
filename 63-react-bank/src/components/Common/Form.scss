@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 .login_header {
   display: flex;
   justify-content: space-between;
@@ -24,7 +26,7 @@ form.login_form {
     padding: 8px 1px 3px 1px;
     margin-bottom: 1.4em;
     border: none;
-    border-bottom: 1px solid #f4613a;
+    border-bottom: 1px solid $main-details-color;
     background-color: #3d4046;
     color: white;
     font-size: 0.9em;
@@ -32,7 +34,7 @@ form.login_form {
   }
 
   .form_btn {
-    background-color: #f4613a;
+    background-color: $main-details-color;
     width: 100%;
     height: 2em;
     margin-bottom: 1em;
@@ -45,7 +47,7 @@ form.login_form {
 
   a {
     display: block;
-    color: #f4613a;
+    color: $main-details-color;
     font-size: 0.8em;
     font-weight: 600;
     padding: 1em;
@@ -75,5 +77,5 @@ form.login_form {
 }
 .login_form_hr-line {
   height: 1.5px;
-  background-color: #f4613a;
+  background-color: $main-details-color;
 }
