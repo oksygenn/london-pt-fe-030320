@@ -4,7 +4,8 @@
   position: relative;
   width: 400px;
   height: auto;
-  margin: 0 auto;
+  font-size: 0.9em;
+  margin: 0 auto 3em auto;
   min-width: 300px;
   border-radius: 7px;
   background: linear-gradient(
@@ -34,13 +35,6 @@
     }
   }
 
-  .hr_line {
-    width: 100%;
-    height: 1px;
-    background-color: rgba(133, 135, 136, 0.6);
-    margin: 0 0 0.5em 0;
-  }
-
   .items_container {
     .item_wrapper {
       display: flex;
@@ -62,6 +56,13 @@
     padding: 0.5em;
     border-radius: 7px;
     margin: 0.5em -0.5em;
+  }
+
+  .hr_line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(133, 135, 136, 0.6);
+    margin: 0 0 0.5em 0;
   }
 }
 

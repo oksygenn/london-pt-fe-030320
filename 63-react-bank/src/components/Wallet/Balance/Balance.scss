@@ -11,7 +11,7 @@
     #3d4046 27.15%,
     rgba(61, 64, 70, 0) 154.52%
   );
-  margin: 6em auto 3em auto;
+  margin: 2em auto 2em auto;
 
   .balance_internal_wrapper {
     position: relative;
@@ -34,24 +34,29 @@
         font-size: 0.8em;
       }
     }
+  }
 
-    .balance_flex_item_2 {
-      display: block;
-      font-size: 0.6em;
-      text-align: end;
+  .balance_expanded_input_button {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+  }
 
-      img {
-        width: 42px;
-        height: 36px;
-      }
-    }
+  .balance_btn_3 {
+    width: 110px;
+    height: 23px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    margin-left: 1em;
   }
 }
 
-.balance_left_border {
-  position: absolute;
-  width: 3px;
-  height: 80%;
-  margin: 0.5em 0 0 0.5em;
-  border-radius: 7px;
+input[type="text"] {
+  background-color: inherit;
+  border: none;
+  border-bottom: 0.6px solid rgba(133, 135, 136, 0.6);
+  width: 230px;
+  padding: 0 0.5em;
+  color: white;
 }
