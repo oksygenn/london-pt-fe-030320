@@ -54,6 +54,11 @@ form.login_form {
   label {
     font-size: 0.8em;
   }
+
+  .avatar {
+    width: 42px;
+    height: 36px;
+  }
 }
 
 .login_form_hr-line {
@@ -63,6 +68,7 @@ form.login_form {
 .form_flex_container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .login_form_top {

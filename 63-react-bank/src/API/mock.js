@@ -222,5 +222,6 @@ export const users = [
     password: "password",
     roundingPense: true,
     blocked: false,
+    avatar: "./images/man_1.svg",
   },
 ];

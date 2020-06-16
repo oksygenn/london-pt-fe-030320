@@ -5,8 +5,10 @@ import { ImageUpload } from "../ImageUpload/ImageUpload";
 import { users } from "../../API/mock";
 import { useHistory } from "react-router-dom";
 
-export const SignUp = () => {
+export const SignUp = (props) => {
   const history = useHistory();
+  const avatarHolder = {};
+
   const submit = (e) => {
     e.preventDefault();
     const password = e.target.form_password1.value;
@@ -22,6 +24,7 @@ export const SignUp = () => {
       password: password,
       roundingPense: true,
       blocked: false,
+      avatar: avatarHolder.url,
     };
     users.push(newUser);
     history.push("/login");
@@ -70,8 +73,7 @@ export const SignUp = () => {
           required
         ></input>
         <div className="form_flex_container">
-          <ImageUpload />
-          <img src="./images/man_1.svg" alt="avatar" />
+          <ImageUpload avatar={avatarHolder} />
         </div>
         <input type="submit" value="Sign Up" className="form_btn"></input>
       </Form>

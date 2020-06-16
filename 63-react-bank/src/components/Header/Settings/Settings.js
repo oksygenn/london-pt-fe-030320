@@ -7,6 +7,7 @@ import { users } from "../../../API/mock";
 
 const Settings = (props) => {
   const [user, setUser] = useState(props.user);
+  const avatarHolder = {};
 
   const handleBlockedChange = (e) => {
     updateUser({
@@ -32,6 +33,7 @@ const Settings = (props) => {
       lastName: e.target.form_last_name.value,
       email: e.target.form_email.value,
       password: password,
+      avatar: avatarHolder.url,
     });
     props.goBack();
   };
@@ -62,7 +64,6 @@ const Settings = (props) => {
               <label class="switch">
                 <input
                   type="checkbox"
-                  // defaultChecked={user.blocked}
                   name="blocked"
                   checked={user.blocked}
                   onChange={handleBlockedChange}
@@ -79,7 +80,6 @@ const Settings = (props) => {
               <label class="switch">
                 <input
                   type="checkbox"
-                  // defaultChecked={user.roundingPense}
                   name="roundingPense"
                   checked={user.roundingPense}
                   onChange={handleRoundExpensesChange}
@@ -138,8 +138,7 @@ const Settings = (props) => {
           ></input>
 
           <div className="form_flex_container">
-            <ImageUpload />
-            <img src="./images/man_1.svg" alt="avatar" />
+            <ImageUpload avatar={avatarHolder} user={user} />
           </div>
           <input type="submit" value="Save" className="form_btn"></input>
         </Form>

@@ -48,7 +48,7 @@ const Balance = (props) => {
           ) : (
             <>
               <div className="balance_user_avatar">
-                <img src="./images/man_1.svg" alt="avatar" />
+                <img src={props.user.avatar} alt="avatar" />
               </div>
               <p className="balance_date">{props.source.date}</p>
             </>

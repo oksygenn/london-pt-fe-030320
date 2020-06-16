@@ -35,7 +35,7 @@ const Header = (props) => {
                 </a>
               </li>
               <li>
-                <Link to="/sign_out">sign out</Link>
+                <Link to="/signout">sign out</Link>
               </li>
             </>
           ) : (

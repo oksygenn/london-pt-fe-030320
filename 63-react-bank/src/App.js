@@ -17,6 +17,10 @@ function App() {
     setUser(user);
   };
 
+  const clearUser = () => {
+    setUser(undefined);
+  };
+
   return (
     <div className="App">
       <Switch>
@@ -43,6 +47,9 @@ function App() {
             <Route path="/loans">
               <Header user={user} updateUser={updateUser} signedIn={true} />
               <Loans user={user} />
+            </Route>
+            <Route path="/signout">
+              <Redirect to="/login" />
             </Route>
           </>
         )}
