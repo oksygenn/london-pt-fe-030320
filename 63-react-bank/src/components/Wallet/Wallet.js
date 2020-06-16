@@ -11,6 +11,9 @@ const Wallet = () => {
       <Header signedIn={true} />
       <Balance source={getBalance()} />
       <Transactions source={getTransactions()} detailsExpandable={true} />
+      <div>
+        <button className="useless_button">Add expense</button>
+      </div>
     </div>
   );
 };

@@ -27,3 +27,19 @@
     color: $main-details-color;
   }
 }
+
+.useless_button {
+  display: block;
+  background-color: $main-details-color;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 1em;
+  width: 80vw;
+  margin: 3em auto;
+  font-size: 1.5em;
+}
+
+.useless_button:hover {
+  background-color: coral;
+}
