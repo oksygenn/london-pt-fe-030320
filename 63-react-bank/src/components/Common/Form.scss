@@ -65,13 +65,8 @@ form.login_form {
   justify-content: space-between;
 }
 
-// .login_form_top {
-//   display: flex;
-//   justify-content: space-between;
-//   padding: 1em;
-
-//   .login_form_span {
-//     display: inline-block;
-//     text-transform: uppercase;
-//   }
-// }
+.login_form_top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
