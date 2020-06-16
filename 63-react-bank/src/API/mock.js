@@ -217,3 +217,13 @@ export const getLoansTransactions = () => {
     },
   ];
 };
+
+export const users = [
+  {
+    id: 1,
+    firstName: "John",
+    lastName: "Smith",
+    email: "john@smith.net",
+    password: "password",
+  },
+];
