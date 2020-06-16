@@ -84,10 +84,6 @@ input[type="text"] {
 .balance_flex_item_2 {
   display: flex;
   flex-direction: column;
-
-  .balance_btn:hover {
-    opacity: 0.7;
-  }
 }
 
 .balance_btn_2 {
@@ -101,4 +97,8 @@ input[type="text"] {
 
 .balance_expanded {
   padding: 0 1em;
+}
+
+.balance_btn:hover {
+  opacity: 0.7;
 }

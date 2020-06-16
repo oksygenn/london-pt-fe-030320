@@ -2,13 +2,14 @@ import React from "react";
 import Header from "../Header/Header";
 import "./Login.scss";
 import { Form } from "../Common/Form";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <div className="login_page">
       <Header />
 
-      <Form action="#" title="Login" backButton={false}>
+      <Form action="#" title="login" backButton={false}>
         <label htmlFor="form_email">Email</label>
         <input
           type="email"
@@ -26,7 +27,7 @@ const Login = () => {
           required
         ></input>
         <input type="submit" value="Login" className="form_btn"></input>
-        <a href="#">Sign Up</a>
+        <Link to="/signup">Sign Up</Link>
       </Form>
     </div>
   );

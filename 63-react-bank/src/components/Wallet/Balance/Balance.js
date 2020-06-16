@@ -49,7 +49,9 @@ const Balance = (props) => {
           <div className="hr_line"></div>
           <div className="balance_expanded_input_button">
             <input type="text" placeholder="£ 500" />
-            <button className="balance_btn_3 colorized">Transfer</button>
+            <button className="balance_btn balance_btn_3 colorized">
+              Transfer
+            </button>
           </div>
         </div>
       ) : null}

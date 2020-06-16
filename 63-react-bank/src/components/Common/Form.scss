@@ -8,15 +8,6 @@
   padding: 2em;
 }
 
-.login_form_wrapper {
-  width: 400px;
-  height: auto;
-  min-width: 300px;
-  border-radius: 8px;
-  background-color: #3d4046;
-  margin: 6em auto;
-}
-
 form.login_form {
   padding: 2em 5em 5em 5em;
 
@@ -65,17 +56,22 @@ form.login_form {
   }
 }
 
-.login_form_top {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
-
-  .login_form_span {
-    display: inline-block;
-    text-transform: uppercase;
-  }
-}
 .login_form_hr-line {
   height: 1.5px;
   background-color: $main-details-color;
 }
+.form_flex_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+// .login_form_top {
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 1em;
+
+//   .login_form_span {
+//     display: inline-block;
+//     text-transform: uppercase;
+//   }
+// }

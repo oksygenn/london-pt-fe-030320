@@ -6,7 +6,7 @@ import { ImageUpload } from "../ImageUpload/ImageUpload";
 
 export const SignUp = () => {
   return (
-    <>
+    <div className="signup">
       <Header />
       <Form title="Sign Up" backButton={true}>
         <label htmlFor="form_first_name">First name</label>
@@ -48,11 +48,12 @@ export const SignUp = () => {
           className="form_inputs"
           required
         ></input>
-
-        <ImageUpload />
+        <div className="form_flex_container">
+          <ImageUpload />
+          <img src="./images/man_1.svg" alt="avatar" />
+        </div>
         <input type="submit" value="Sign Up" className="form_btn"></input>
-        <img src="./images/man_1.svg" alt="avatar" />
       </Form>
-    </>
+    </div>
   );
 };
