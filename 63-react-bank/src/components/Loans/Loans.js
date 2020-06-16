@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import Balance from "../Wallet/Balance/Balance";
 import Transactions from "../Wallet/Transactions/Transactions";
-import { getLoansBalance, getLoansTransactions } from "../../API/mock";
+import {
+  getLoansBalance,
+  getLoansTransactions,
+  userLoansBalance,
+  userBalance,
+} from "../../API/mock";
 import "./Loans.scss";
 
-const buttons = {
-  primary: "take loan",
-  secondary: "pay back",
-};
-
 const Loans = () => {
+  const [balance, setBalance] = useState(getLoansBalance());
+
+  const buttons = {
+    primary: "take loan",
+    secondary: "pay back",
+    inputAction: (value) => {
+      userLoansBalance.balance -= value;
+      setBalance({ ...userLoansBalance });
+      userBalance.balance += value;
+    },
+  };
+
   return (
     <div className="loans">
       <Header signedIn={true} />
-      <Balance source={getLoansBalance()} buttons={buttons} />
+      <Balance source={balance} buttons={buttons} />
       <Transactions source={getLoansTransactions} dateVisible={true} />
     </div>
   );

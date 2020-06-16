@@ -10,10 +10,9 @@ export const userSavingsBalance = {
   date: new Date().toLocaleDateString(),
 };
 
-export const getLoansBalance = () => {
-  return {
-    balance: -5678.0,
-  };
+export const getLoansBalance = () => userLoansBalance;
+export const userLoansBalance = {
+  balance: -5678.0,
 };
 
 export const getTransactions = () => userTransactions;

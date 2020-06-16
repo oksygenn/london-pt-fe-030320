@@ -3,6 +3,18 @@ import "./Balance.scss";
 
 const Balance = (props) => {
   const [detailsVisible, setDetailsVisible] = useState(false);
+  const [input, setInput] = useState(0);
+
+  const handleInputChange = (e) => {
+    let value = parseInt(e.target.value);
+    if (isNaN(value)) value = 0;
+    setInput(value);
+  };
+
+  const handleInputClick = () => {
+    if (!props.buttons.inputAction) return;
+    props.buttons.inputAction(input);
+  };
 
   const toggleDetails = () => {
     setDetailsVisible(!detailsVisible);
@@ -48,8 +60,15 @@ const Balance = (props) => {
         <div className="balance_expanded">
           <div className="hr_line"></div>
           <div className="balance_expanded_input_button">
-            <input type="text" placeholder="£ 500" />
-            <button className="balance_btn balance_btn_3 colorized">
+            <input
+              type="number"
+              placeholder="£ 500"
+              onChange={handleInputChange}
+            />
+            <button
+              className="balance_btn balance_btn_3 colorized"
+              onClick={handleInputClick}
+            >
               Transfer
             </button>
           </div>
