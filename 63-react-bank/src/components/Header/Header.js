@@ -13,7 +13,7 @@ const Header = (props) => {
         {props.signedIn ? (
           <>
             <li>
-              <Link to="/wallet">Wallet</Link>
+              <Link to="/">Wallet</Link>
             </li>
             <li>
               <Link to="/savings">Savings</Link>

@@ -15,4 +15,8 @@
   .colorized {
     background-color: $savings-details-color;
   }
+
+  a:hover {
+    color: $savings-details-color;
+  }
 }

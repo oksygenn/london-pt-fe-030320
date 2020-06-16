@@ -22,4 +22,8 @@
     margin: 0.5em 0 0 1em;
     border-radius: 7px;
   }
+
+  a:hover {
+    color: $main-details-color;
+  }
 }
