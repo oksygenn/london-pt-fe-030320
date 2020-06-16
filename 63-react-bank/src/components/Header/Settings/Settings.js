@@ -12,7 +12,30 @@ const Settings = (props) => {
           <p>Settings</p>
           <img onClick={props.goBack} src="././images/back_arrow.svg" alt="" />
         </div>
-        <div className="settings_togglers"></div>
+        <div className="settings_togglers">
+          <div className="toggler block_account_toggler">
+            <span>Block account</span>
+            <div className="internal_toggler_wrapper">
+              <span>off</span>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <span>on</span>
+            </div>
+          </div>
+          <div className="toggler round_expenses_toggler">
+            <span>Round expenses</span>
+            <div className="internal_toggler_wrapper">
+              <span>off</span>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <span>on</span>
+            </div>
+          </div>
+        </div>
 
         <Form title="User">
           <label htmlFor="form_first_name">First name</label>
