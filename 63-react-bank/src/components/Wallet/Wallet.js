@@ -44,7 +44,6 @@ const Wallet = (props) => {
 
   return (
     <div className="wallet">
-      <Header signedIn={true} />
       <Balance source={balance} />
       <Transactions source={transactions} detailsExpandable={true} />
       <div>

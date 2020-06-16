@@ -13,7 +13,6 @@ const buttons = {
 const Savings = () => {
   return (
     <div className="savings">
-      <Header signedIn={true} />
       <Balance source={getSavingsBalance()} buttons={buttons} />
       <Transactions
         dateVisible={true}

@@ -43,7 +43,13 @@ const Header = (props) => {
           )}
         </ul>
       </div>
-      {settingsVisible ? <Settings goBack={toggleSettings} /> : null}
+      {settingsVisible ? (
+        <Settings
+          goBack={toggleSettings}
+          user={props.user}
+          updateUser={props.updateUser}
+        />
+      ) : null}
     </>
   );
 };

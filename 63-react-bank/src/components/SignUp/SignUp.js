@@ -1,6 +1,5 @@
 import React from "react";
 import "./SignUp.scss";
-import Header from "../Header/Header";
 import { Form } from "../Common/Form";
 import { ImageUpload } from "../ImageUpload/ImageUpload";
 import { users } from "../../API/mock";
@@ -12,7 +11,7 @@ export const SignUp = () => {
     e.preventDefault();
     const password = e.target.form_password1.value;
     if (password !== e.target.form_password2.value) {
-      alert("Password don't match");
+      alert("Passwords don't match");
       return;
     }
     const newUser = {
@@ -21,6 +20,8 @@ export const SignUp = () => {
       lastName: e.target.form_last_name.value,
       email: e.target.form_email.value,
       password: password,
+      roundingPense: true,
+      blocked: false,
     };
     users.push(newUser);
     history.push("/login");
@@ -28,7 +29,6 @@ export const SignUp = () => {
 
   return (
     <div className="signup">
-      <Header />
       <Form title="Sign Up" backButton={true} onSubmit={submit}>
         <label htmlFor="form_first_name">First name</label>
         <input
@@ -54,7 +54,7 @@ export const SignUp = () => {
           required
         ></input>
 
-        <label htmlFor="form_password">Password</label>
+        <label htmlFor="form_password1">Password</label>
         <input
           type="password"
           name="form_password1"
@@ -62,7 +62,7 @@ export const SignUp = () => {
           required
         ></input>
 
-        <label htmlFor="form_password">Confirm password</label>
+        <label htmlFor="form_password2">Confirm password</label>
         <input
           type="password"
           name="form_password2"

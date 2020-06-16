@@ -221,5 +221,6 @@ export const users = [
     email: "john@smith.net",
     password: "password",
     roundingPense: true,
+    blocked: false,
   },
 ];

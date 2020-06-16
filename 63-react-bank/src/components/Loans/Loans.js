@@ -25,7 +25,6 @@ const Loans = () => {
 
   return (
     <div className="loans">
-      <Header signedIn={true} />
       <Balance source={balance} buttons={buttons} />
       <Transactions source={getLoansTransactions} dateVisible={true} />
     </div>

@@ -24,8 +24,6 @@ const Login = (props) => {
 
   return (
     <div className="login_page">
-      <Header />
-
       <Form title="login" backButton={false} onSubmit={submit}>
         <label htmlFor="form_email">Email</label>
         <input
