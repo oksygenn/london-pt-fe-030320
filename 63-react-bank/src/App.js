@@ -10,15 +10,10 @@ import { users } from "./API/mock";
 import Header from "./components/Header/Header";
 
 function App() {
-  // FIXME: replace with undefined before release!
-  const [user, setUser] = useState(users[0]);
+  const [user, setUser] = useState(undefined);
 
   const updateUser = (user) => {
     setUser(user);
-  };
-
-  const clearUser = () => {
-    setUser(undefined);
   };
 
   return (
