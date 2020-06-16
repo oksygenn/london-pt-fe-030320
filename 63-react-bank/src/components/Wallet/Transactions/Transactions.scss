@@ -13,6 +13,7 @@
     #3d4046 27.15%,
     rgba(61, 64, 70, 0) 154.52%
   );
+  overflow: hidden;
 
   .internal_wrapper {
     padding: 0.5em;
@@ -77,6 +78,7 @@
   font-weight: 600;
   font-size: 0.8em;
   text-transform: uppercase;
+  margin: 1em -2em;
 }
 
 .minus,

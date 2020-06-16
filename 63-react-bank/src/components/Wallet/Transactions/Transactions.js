@@ -22,7 +22,15 @@ const Transactions = (props) => {
         <div className="hr_line"></div>
 
         <div className="items_container">
-          {transactions.map((el) => (
+          {transactions.slice(0, transactions.length / 2).map((el) => (
+            <TransactionItem
+              transaction={el}
+              dateVisible={props.dateVisible}
+              detailsExpandable={props.detailsExpandable}
+            />
+          ))}
+          <div className="date_header colorized">Yesterday</div>
+          {transactions.slice(transactions.length / 2).map((el) => (
             <TransactionItem
               transaction={el}
               dateVisible={props.dateVisible}
@@ -31,7 +39,6 @@ const Transactions = (props) => {
           ))}
         </div>
       </div>
-      <div className="date_header colorized">Yesterday</div>
     </div>
   );
 };
