@@ -4,13 +4,13 @@ import "./Settings.scss";
 import { Form } from "../../Common/Form";
 import { ImageUpload } from "../../ImageUpload/ImageUpload";
 
-const Settings = () => {
+const Settings = (props) => {
   return (
     <div className="settings">
       <div className="settings_wrapper">
         <div className="settings_header">
           <p>Settings</p>
-          <img src="././images/back_arrow.svg" alt="" />
+          <img onClick={props.goBack} src="././images/back_arrow.svg" alt="" />
         </div>
         <div className="settings_togglers"></div>
 

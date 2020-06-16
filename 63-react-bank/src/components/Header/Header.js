@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Common/Common.scss";
 import "./Header.scss";
 import Settings from "./Settings/Settings";
 
 const Header = (props) => {
+  const [settingsVisible, setSettingsVisible] = useState(false);
+
+  const toggleSettings = () => {
+    setSettingsVisible(!settingsVisible);
+  };
+
   return (
     <>
       <div className="login_header">
@@ -24,7 +30,9 @@ const Header = (props) => {
                 <Link to="/loans">loans</Link>
               </li>
               <li>
-                <Link to="/settings">settings</Link>
+                <a href="#" onClick={toggleSettings}>
+                  settings
+                </a>
               </li>
               <li>
                 <Link to="/sign_out">sign out</Link>
@@ -35,7 +43,7 @@ const Header = (props) => {
           )}
         </ul>
       </div>
-      <Settings />
+      {settingsVisible ? <Settings goBack={toggleSettings} /> : null}
     </>
   );
 };

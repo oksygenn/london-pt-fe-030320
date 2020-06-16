@@ -21,7 +21,14 @@ const TransactionItem = (props) => {
             ""
           )}
         </div>
-        <p className="item_price">{`£${props.transaction.amount}`}</p>
+        <p className="item_price">
+          {props.transaction.amount < 0 ? (
+            <span className="minus">-</span>
+          ) : (
+            <span className="plus">+</span>
+          )}
+          {`£${Math.abs(props.transaction.amount)}`}
+        </p>
       </div>
       {detailsVisible ? (
         <>

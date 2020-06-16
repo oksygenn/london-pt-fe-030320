@@ -78,3 +78,18 @@
   font-size: 0.8em;
   text-transform: uppercase;
 }
+
+.minus,
+.plus {
+  font-weight: bold;
+  padding: 0 0.5em;
+}
+
+.minus {
+  color: $main_details_color;
+}
+
+.plus {
+  color: $savings_details_color;
+  font-size: 0.8em;
+}
