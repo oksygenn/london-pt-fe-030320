@@ -4,8 +4,11 @@ import "./ImageUpload.scss";
 export const ImageUpload = () => {
   return (
     <div className="upload_avatar-wrapper">
-      <label htmlFor="file"> Choose a file </label>
-      <input type="file" id="file" />
+      <span>Upload avatar</span>
+      <label htmlFor="upload" className="upload">
+        Upload
+        <input type="file" id="upload" />
+      </label>
     </div>
   );
 };

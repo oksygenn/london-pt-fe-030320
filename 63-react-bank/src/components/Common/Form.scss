@@ -33,7 +33,11 @@ form.login_form {
     border-radius: 7px;
     color: white;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 700;
+  }
+
+  .form_btn:hover {
+    background-color: #cc4621;
   }
 
   a {
@@ -49,10 +53,6 @@ form.login_form {
 
   label {
     font-size: 0.8em;
-  }
-
-  input[type="submit"]:hover {
-    opacity: 0.8;
   }
 }
 
