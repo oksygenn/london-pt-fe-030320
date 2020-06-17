@@ -45,12 +45,12 @@ const Wallet = (props) => {
   return (
     <div className="wallet">
       <Balance source={balance} user={props.user} />
-      <Transactions source={transactions} detailsExpandable={true} />
       <div>
         <button className="useless_button" onClick={addExpense}>
           Add expense
         </button>
       </div>
+      <Transactions source={transactions} detailsExpandable={true} />
     </div>
   );
 };

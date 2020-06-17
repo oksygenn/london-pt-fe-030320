@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../Common/Common.scss";
 import "./Header.scss";
 import Settings from "./Settings/Settings";
 
@@ -49,6 +48,11 @@ const Header = (props) => {
           user={props.user}
           updateUser={props.updateUser}
         />
+      ) : null}
+      {props.user?.blocked ? (
+        <div className="blocked_account">
+          <h1>Account is blocked!</h1>
+        </div>
       ) : null}
     </>
   );

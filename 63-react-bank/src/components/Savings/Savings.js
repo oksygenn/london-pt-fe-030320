@@ -1,7 +1,6 @@
 import React from "react";
 import "./Savings.scss";
 import Balance from "../Wallet/Balance/Balance";
-import Header from "../Header/Header";
 import { getSavingsTransactions, getSavingsBalance } from "../../API/mock";
 import Transactions from "../Wallet/Transactions/Transactions";
 

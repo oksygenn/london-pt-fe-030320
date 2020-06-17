@@ -22,10 +22,6 @@
     margin: 0.5em 0 0 1em;
     border-radius: 7px;
   }
-
-  a:hover {
-    color: $main-details-color;
-  }
 }
 
 .useless_button {
@@ -35,11 +31,15 @@
   border-radius: 7px;
   color: white;
   padding: 1em;
-  width: 80vw;
-  margin: 3em auto;
-  font-size: 1.5em;
+  width: 10em;
+  margin: 1.5em auto;
+  font-size: 1em;
 }
 
 .useless_button:hover {
   background-color: coral;
+}
+
+a:hover {
+  color: $main-details-color;
 }

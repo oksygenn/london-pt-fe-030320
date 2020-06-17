@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../Header/Header";
 import Balance from "../Wallet/Balance/Balance";
 import Transactions from "../Wallet/Transactions/Transactions";
 import {

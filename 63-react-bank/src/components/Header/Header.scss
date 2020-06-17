@@ -1,3 +1,7 @@
+// .login_header {
+//   position: relative;
+// }
+
 .nav_menu {
   padding: 0 1em;
   display: flex;
@@ -9,5 +13,27 @@
     text-decoration: none;
     color: white;
     margin: 0 0.5em;
+  }
+}
+
+.blocked_account {
+  // display: none;
+  width: 80vw;
+  height: 80vh;
+  background-color: red;
+  opacity: 0.9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+
+  h1 {
+    font-size: 4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
